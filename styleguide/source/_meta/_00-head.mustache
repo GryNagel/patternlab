@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html class="{{ htmlClass }}">
-  <head>
+<head>
     <title>{{ title }}</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    
-    <link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all" />
-    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all" />
-    
+    <meta name="viewport" content="width=device-width"/>
+
+    <link rel="stylesheet" href="https://unpkg.com/blaze@4.0.0-5/scss/dist/blaze.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/blaze@4.0.0-5/scss/dist/blaze.colors.min.css"/>
+    <link rel="stylesheet" href="../../css/style.css?{{ cacheBuster }}" media="all"/>
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?{{ cacheBuster }}" media="all"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i,500|Rubik:400,500" rel="stylesheet">
+
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     {{{ patternLabHead }}}
     <!-- End Pattern Lab -->
-  
-  </head>
-  <body class="{{ bodyClass }}">
+
+</head>
+<body class="{{ bodyClass }}">
     

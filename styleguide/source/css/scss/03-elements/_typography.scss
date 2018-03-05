@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    #TYPOGRAPHY
+\*------------------------------------*/
+
+// Base styling of typographic elements
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base-mobile;
+  @include media($medium-screen-up) { font-size: $font-size-base; }
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @include word-wrap();
+  margin-top: 0;
+  color: inherit;
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-medium;
+  line-height: $heading-line-height;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+h2,
+h3,
+h4,
+h5 { margin-bottom: $paragraph-margin-bottom/2; }
+
+h1 {
+  font-size: $font-size-h1-mobile;
+  margin-bottom: $paragraph-margin-bottom;
+  @include media($medium-screen-up) { font-size: $font-size-h1; }
+}
+
+h2 {
+  font-size: $font-size-h2-mobile;
+  @include media($medium-screen-up) { font-size: $font-size-h2; }
+}
+
+h3 {
+  font-size: $font-size-h3-mobile;
+  @include media($medium-screen-up) { font-size: $font-size-h3; }
+}
+
+h4 {
+  font-size: $font-size-h4-mobile;
+  margin-bottom: 15px;
+  @include media($medium-screen-up) { font-size: $font-size-h4; }
+}
+
+p {
+  @include word-wrap();
+  max-width: $paragraph-max-width;
+  margin: 0 0 $paragraph-margin-bottom;
+  line-height: $paragraph-line-height-mobile;
+
+  @include media($medium-screen-up) { line-height: $paragraph-line-height; }
+}
+
+a {
+  // color: $color-link;
+  text-decoration: none;
+  transition: all 300ms,
+  color 150ms,
+  background 150ms;
+
+  // &:hover { color: $color-orange; }
+}

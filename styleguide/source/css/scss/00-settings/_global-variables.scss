@@ -1,0 +1,147 @@
+@import "vendor/vendor";
+
+// Config
+// -------------------------
+$fontpath: '../fonts';
+$imgpath: '../images';
+
+// Colors
+// -------------------------
+
+// Brand colors
+$color-blueberry: #434789;
+$color-light-royal-blue: #634efb;
+$color-cerulean: #007ebd;
+$color-azure: #00aaff;
+$color-baby-blue: #99ddff;
+$color-blue-grey-2: #f0f7fa;
+$color-blue-grey-1: #f4f9fb;
+$color-greenish-teal: #46cd8f;
+$color-coral: #f55858;
+
+// Neutral colors
+$color-white: #fff;
+$color-pale-grey-1: #f5f5f5;
+$color-pale-grey-2: #ebebeb;
+$color-warm-grey: #707070;
+$color-greyish-brown: #525252;
+$color-charcoal-grey: #3a333d;
+$color-black: #131114;
+
+// Utility colors
+$color-success: $color-greenish-teal;
+$color-error: $color-coral;
+
+// Color definitions
+$color-border-light: $color-pale-grey-2;
+$color-border-darker: $color-pale-grey-2;
+$color-border-dotted: $color-coral;
+// $color-border-darkest: $color-gray-3;
+$color-img-placeholder: $color-pale-grey-2;
+$color-border-accent: $color-baby-blue;
+$color-border-accent-dark: $color-azure;
+
+// Font vars
+// -------------------------
+$font-family-arvo: 'Arvo', serif;
+$font-family-rubik: 'Rubik', sans-serif;
+
+$font-family-primary: $font-family-arvo;  // Body text
+$font-family-secondary: $font-family-rubik; // Heading text
+
+//$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-base-mobile: 15px;
+$font-size-base:        17px;
+
+$font-size-h1-mobile:   32px;
+$font-size-h1:          40px;
+
+$font-size-h2-mobile:   24px;
+$font-size-h2:          30px;
+
+$font-size-h3-mobile:   22px;
+$font-size-h3:          24px;
+
+$font-size-h4-mobile:   19px;
+$font-size-h4:          21px;
+
+// Line height
+// -------------------------
+$base-line-height: 1.4;
+$heading-line-height: 1.2;
+
+// Spacing
+// -------------------------
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$micro-spacing: $small-spacing / 2;
+$large-spacing: $base-spacing * 2;
+
+$paragraph-max-width: 700px;
+$paragraph-margin-bottom: 25px;
+$paragraph-line-height-mobile: 1.6;
+$paragraph-line-height: $base-line-height;
+
+$padded-box-pad: 20px;
+$padded-box-pad-mobile: 10px;
+
+// Border-radius
+// -------------------------
+$border-radius-small: 2px;
+$border-radius-base: 3px;
+$border-radius-medium: 4px;
+$border-radius-large: 8px;
+
+// Borders
+// -------------------------
+$border-light:       1px solid $color-border-light;
+$border-darker:      1px solid $color-border-darker;
+// $border-darkest:  1px solid $color-border-darkest;
+$border-accent:      1px solid $color-border-accent;
+$border-accent-dark: 1px solid $color-border-accent-dark;
+$border-dotted: 1px dotted $color-border-dotted;
+
+// Transitions
+// -------------------------
+$transition-easing-base: ease;
+$transition-easing-quick: cubic-bezier(0, 0, 0, 1);
+$transition-speed-quick: 400ms;
+$transition-speed-base: 400ms;
+$transition-speed-long: 800ms;
+
+$transition-base: $transition-speed-base $transition-easing-base;
+$transition-long: $transition-speed-long $transition-easing-base;
+
+$transition-main-nav: $transition-speed-long $transition-easing-quick;
+
+// Widhts
+// -------------------------
+// Max width of content is set in _grid-settings.scss
+
+// Various sizes
+// -------------------------
+// Nothing here yet
+
+// Breakpoints
+// -------------------------
+$mobile-screen: 375px;
+$medium-screen: 768px;   // "Tablet"
+$large-screen: 1024px;   // "Desktop"
+$x-large-screen: 1440px; // "HighDef"
+
+$mobile-only-screen: $medium-screen - 1px;
+$lt-large-screen: $large-screen - 1px; // lt = less than
+$lt-x-large-screen: $x-large-screen - 1px;
+
+// Media queries
+// -------------------------
+$mobile-only: new-breakpoint(max-width $mobile-only-screen 12);
+$medium-screen-up: new-breakpoint(min-width $medium-screen 12);
+$medium-only: new-breakpoint(min-width $medium-screen max-width $lt-large-screen 12);
+$large-screen-down: new-breakpoint(max-width $lt-large-screen 12);
+$large-screen-up: new-breakpoint(min-width $large-screen 12);
+$x-large-screen-up: new-breakpoint(min-width $x-large-screen 12);
