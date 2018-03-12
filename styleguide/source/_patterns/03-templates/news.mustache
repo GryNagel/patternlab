@@ -1,0 +1,22 @@
+{{>organisms-header}}
+
+<div class="o-container o-container--large">
+    <div class="o-grid o-grid--wrap">
+        <div class="o-grid__cell o-grid__cell--width-100 u-letter-box-large">
+            {{>organisms-breadcrumbs}}
+            <h1 class="c-heading u-super">{{ title }}</h1>
+        </div>
+        {{#listItems.six}}
+            <div class="o-grid__cell o-grid__cell--width-50 u-letter-box-medium">
+                {{>organisms-card}}
+            </div>
+        {{/listItems.six}}
+    </div>
+    <div class="u-letter-box-xlarge">
+        {{>molecules-pagination}}
+    </div>
+</div>
+
+{{>organisms-footer}}
+
+
