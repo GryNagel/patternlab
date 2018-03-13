@@ -99,7 +99,7 @@ gulp.task('sprite', function() {
         .on('error', function(error) {
             console.log(error);
         })
-        .pipe(gulp.dest(normalizePath(paths().source.css)))
+        .pipe(gulp.dest(normalizePath(paths().source.css)));
 });
 
 function errorAlert(error){
@@ -110,7 +110,7 @@ function errorAlert(error){
     console.log('Error code:    ', error.status); // used to be "code" in v2x and below
     console.log('Error message:\n',error.messageOriginal);
     this.emit("end"); //End function
-};
+}
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
