@@ -1,5 +1,7 @@
-<button class="c-button" type="button">
-    {{ buttonText }}
+<button class="c-button {{ styleModifier }}" type="button">
+    {{# buttonText }}
+        {{ buttonText }}
+    {{/ buttonText }}
     {{^ buttonText }}
         I'm a button
     {{/ buttonText}}
