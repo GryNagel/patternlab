@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     jshint = require('gulp-jshint'),
     browserify = require('browserify'),
-    source = require('vinyl-source-stream'),
+    // source = require('vinyl-source-stream'),
     sassLint = require('gulp-sass-lint'); // Should set up linting rules for sass
 
 /**
@@ -104,11 +104,13 @@ gulp.task('sprite', function() {
 
 function errorAlert(error){
     notify.onError({title: "Build Error", message: "Check your terminal", sound: "Sosumi"})(error); //Error Notification
-    console.log('Error in file: ${error.file}:${error.line}');
+    console.log('\n');
+    console.log(`Error in file: ${error.file}:${error.line}`); 
     console.log('Line:          ', error.line);
     console.log('Column:        ', error.column);
     console.log('Error code:    ', error.status); // used to be "code" in v2x and below
-    console.log('Error message:\n',error.messageOriginal);
+    console.log('Error message:\n\n',error.messageOriginal);
+    console.log('\n\n'); 
     this.emit("end"); //End function
 }
 
